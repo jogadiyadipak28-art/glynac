@@ -96,14 +96,14 @@ export function Header({
           <Menu className="h-5 w-5 stroke-[3px]" />
         </button>
         <div className="min-w-0">
-          <h1 className="truncate text-xl font-black uppercase tracking-tight text-zinc-800 dark:text-zinc-100">{title}</h1>
-          <p className="hidden truncate text-xs font-bold uppercase tracking-widest text-zinc-800/70 dark:text-zinc-100/70 sm:block">{subtitle}</p>
+          <h1 className="truncate text-xl font-black uppercase tracking-tight text-foreground">{title}</h1>
+          <p className="hidden truncate text-xs font-bold uppercase tracking-widest text-muted sm:block">{subtitle}</p>
         </div>
       </div>
       <div className="flex shrink-0 items-center gap-4">
         <div className="relative">
           <label className="relative block">
-            <Search className="pointer-events-none absolute left-3 top-2.5 h-5 w-5 stroke-[3px] text-zinc-800/50 dark:text-zinc-100/50" />
+            <Search className="pointer-events-none absolute left-3 top-2.5 h-5 w-5 stroke-[3px] text-foreground/50" />
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
@@ -128,14 +128,14 @@ export function Header({
                         onClick={() => openResult(result)}
                         className="w-full border-b border-border px-4 py-3 text-left transition hover:bg-fuchsia-400/10 focus:bg-fuchsia-400/10 last:border-0"
                       >
-                        <span className="block truncate text-sm font-black uppercase text-zinc-800 dark:text-zinc-100">{result.label}</span>
-                        <span className="block truncate text-xs font-bold uppercase tracking-widest opacity-70 text-zinc-800 dark:text-zinc-100">{result.detail}</span>
+                        <span className="block truncate text-sm font-black uppercase text-foreground">{result.label}</span>
+                        <span className="block truncate text-xs font-bold uppercase tracking-widest opacity-70 text-foreground">{result.detail}</span>
                       </button>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="px-4 py-4 text-sm font-black uppercase text-center text-zinc-800 dark:text-zinc-100">No matching records.</p>
+                <p className="px-4 py-4 text-sm font-black uppercase text-center text-foreground">No matching records.</p>
               )}
             </div>
           ) : null}
@@ -159,8 +159,8 @@ export function Header({
             <section className="glass-panel absolute right-0 top-14 z-40 w-[min(23rem,calc(100vw-2rem))] overflow-hidden" aria-label="Recent alerts">
               <div className="flex items-center justify-between border-b border-border bg-card/70 px-4 py-3">
                 <div>
-                  <h2 className="text-sm font-black uppercase text-zinc-800 dark:text-zinc-100">Recent Alerts</h2>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-800/70 dark:text-zinc-100/70">Warnings and critical audit events</p>
+                  <h2 className="text-sm font-black uppercase text-foreground">Recent Alerts</h2>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted">Warnings and critical audit events</p>
                 </div>
                 <button
                   type="button"
@@ -185,8 +185,8 @@ export function Header({
                       >
                         <span className={`mt-1 h-3 w-3 shrink-0 border-2 border-black dark:border-white ${event.severity === "critical" ? "bg-rose-500" : "bg-amber-400"}`} />
                         <span className="min-w-0 flex-1">
-                          <span className="block text-sm font-bold uppercase text-zinc-800 dark:text-zinc-100">{event.action}</span>
-                          <span className="mt-1 block text-[10px] font-bold uppercase tracking-widest text-zinc-800/70 dark:text-zinc-100/70">{event.user} · {formatRelative(event.timestamp)}</span>
+                          <span className="block text-sm font-bold uppercase text-foreground">{event.action}</span>
+                          <span className="mt-1 block text-[10px] font-bold uppercase tracking-widest text-muted">{event.user} · {formatRelative(event.timestamp)}</span>
                         </span>
                         {!readIds.includes(event.id) ? <span className="mt-1 h-3 w-3 shrink-0 border-2 border-black dark:border-white bg-teal-400" /> : null}
                       </button>
@@ -194,7 +194,7 @@ export function Header({
                   ))}
                 </ul>
               ) : (
-                <p className="px-4 py-6 text-center text-sm font-black uppercase text-zinc-800 dark:text-zinc-100">No active alerts.</p>
+                <p className="px-4 py-6 text-center text-sm font-black uppercase text-foreground">No active alerts.</p>
               )}
             </section>
           ) : null}

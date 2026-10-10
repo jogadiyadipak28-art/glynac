@@ -43,7 +43,7 @@ export function Sidebar({
       <aside
         className={cn(
           "fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-border bg-sidebar text-sidebar-text transition-transform duration-300",
-          "lg:inset-y-4 lg:left-4 lg:h-[calc(100vh-2rem)] lg:rounded-2xl lg:border lg:shadow-2xl",
+          "lg:inset-y-4 lg:left-4 lg:h-[calc(100vh-2rem)] lg:rounded-2xl lg:border lg:shadow-2xl overflow-hidden",
           open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
       >
@@ -86,8 +86,8 @@ export function Sidebar({
                 className={cn(
                   "flex items-center gap-3 rounded-xl border px-3 py-3 text-xs font-semibold uppercase tracking-wider transition-all duration-200",
                   active
-                    ? "border-fuchsia-300/20 bg-gradient-to-r from-fuchsia-500/20 to-cyan-400/10 text-white shadow-lg shadow-fuchsia-950/20"
-                    : "border-transparent text-sidebar-text hover:border-border hover:bg-white/5 hover:text-white"
+                    ? "border-fuchsia-300/20 bg-gradient-to-r from-fuchsia-500/20 to-cyan-400/10 text-slate-900 dark:text-white shadow-lg shadow-fuchsia-950/20"
+                    : "border-transparent text-sidebar-text hover:border-border hover:bg-black/5 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white"
                 )}
               >
                 <Icon className={cn("h-5 w-5", active ? "" : "stroke-[2.5px]")} />
@@ -98,7 +98,7 @@ export function Sidebar({
         </nav>
 
         <div className="m-4 rounded-xl border border-cyan-200/20 bg-gradient-to-br from-indigo-400/10 to-fuchsia-400/10 p-4 text-sidebar-text">
-          <p className="mb-2 border-b border-border pb-2 text-xs font-semibold uppercase tracking-widest text-cyan-100">Task 3 · FE-3</p>
+          <p className="mb-2 border-b border-border pb-2 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-100">Task 3 · FE-3</p>
           <p className="text-xs leading-relaxed">
             Mock enterprise admin for wealth compliance. No live production databases.
           </p>
