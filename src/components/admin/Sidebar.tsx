@@ -42,8 +42,9 @@ export function Sidebar({
       ) : null}
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-border bg-sidebar text-sidebar-text transition-transform duration-300 lg:static lg:translate-x-0",
-          open ? "translate-x-0" : "-translate-x-full"
+          "fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-border bg-sidebar text-sidebar-text transition-transform duration-300",
+          "lg:inset-y-4 lg:left-4 lg:h-[calc(100vh-2rem)] lg:rounded-2xl lg:border lg:shadow-2xl",
+          open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
       >
         <div className="mb-4 flex items-center justify-between border-b border-border bg-sidebar px-5 py-6">

@@ -38,7 +38,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="admin-theme flex min-h-screen bg-background text-foreground">
       <Sidebar open={open} onClose={() => setOpen(false)} />
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="flex min-w-0 flex-1 flex-col lg:pl-[17rem]">
         <Header
           title={meta.title}
           subtitle={meta.subtitle}

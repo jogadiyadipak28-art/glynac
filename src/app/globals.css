@@ -17,14 +17,14 @@
 
 .dark {
   --background: #080d1d;
-  --foreground: #e8eaff;
+  --foreground: #ffffff;
   --card: #111a35;
-  --muted: #9aa7ce;
+  --muted: #cbd5e1;
   --border: #34436f;
   --accent: #f14fd0;
   --accent-soft: #382553;
   --sidebar: #0a1026;
-  --sidebar-text: #aeb9dc;
+  --sidebar-text: #ffffff;
   --danger: #ff7aa9;
   --warn: #ffc477;
   --ok: #55e1cf;

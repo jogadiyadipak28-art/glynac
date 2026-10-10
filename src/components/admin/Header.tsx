@@ -200,6 +200,7 @@ export function Header({
           ) : null}
         </div>
 
+        <ThemeToggle />
         <div className="hidden items-center gap-3 rounded-xl border border-border bg-card/80 p-1 pr-4 sm:flex">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-300 to-fuchsia-400 text-xs font-bold text-slate-950">
             EV
