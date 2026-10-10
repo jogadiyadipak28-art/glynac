@@ -36,7 +36,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   const meta = copy[pathname] ?? copy["/"];
 
   return (
-    <div className="flex min-h-screen bg-background text-foreground">
+    <div className="admin-theme flex min-h-screen bg-background text-foreground">
       <Sidebar open={open} onClose={() => setOpen(false)} />
       <div className="flex min-w-0 flex-1 flex-col">
         <Header
