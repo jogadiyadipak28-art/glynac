@@ -273,7 +273,7 @@ const BrutalistRadarChart = () => {
 // =========================================
 // 3. BRUTALIST DONUT CHART (Trend Volume)
 // =========================================
-const springConfig = { type: "spring", stiffness: 300, damping: 20 };
+const springConfig = { type: "spring" as const, stiffness: 300, damping: 20 };
 const getPieCoords = (percent: number) => {
   const x = Math.cos(2 * Math.PI * percent);
   const y = Math.sin(2 * Math.PI * percent);
